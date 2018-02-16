@@ -4,7 +4,7 @@ export default class Filter extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Joe'
+      name: 'Casey'
     }
     this.cities = this.cities.bind(this)
     this.homeTypes = this.homeTypes.bind(this)
@@ -50,16 +50,17 @@ export default class Filter extends Component {
       })
     }
   }
+
   render () {
     return (<section id="filter">
       <div className="inside">
-    <h4>Filter</h4>
+    <h4>OPTIONS</h4>
     <label htmlFor="city">City</label>
     <select name="city" className="filters city" onChange={this.props.change}>
     <option value="All">All</option>
       {this.cities()}
     </select>
-    <label htmlFor="city">Home Type</label>
+    <label htmlFor="city">Property Type</label>
     <select name="homeType" className="filters homeType" onChange={this.props.change}>
       <option value="All">All Homes</option>
       {this.homeTypes()}

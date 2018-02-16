@@ -1,16 +1,27 @@
 header {
-  background: #0C002B;
+  background: #2E5EA6;
   color: white;
   overflow: auto;
-  padding: 20px 15px;
-
+  // padding: 20px 15px;
   .logo {
     float: left;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 4rem;
+    img{
+      height: 24px;
+      width: 24px;
+    }
+  }
+  .title{
+    margin-top: 1rem;
+    display: inline-block;
   }
 
   nav {
     float: right;
-
+    margin-top: 1rem;
     a {
       color: white;
       text-decoration: none;
@@ -18,18 +29,31 @@ header {
       text-transform: capitalize;
       font-weight: 300;
       font-size: 0.9rem;
-
+      transition: .15s ease-in-out;
       &:hover {
-        color: #FF718E;
+        color: #DDD5D7;
       }
-
       &.register-btn {
-        background: $pink;
+        background: #26407A;
+        margin: 0px 7px;
         padding: 7px 25px;
         text-align: center;
         color: white;
         border-radius: 5px;
+        &:hover {
+        background: white;
+        color: black;
+        }
       }
     }
   }
+
+  .top-img{
+    img{
+      height: 500px;
+      width: 100%;
+      overflow: auto;
+    }
+  }
+
 }

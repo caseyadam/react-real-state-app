@@ -10,19 +10,16 @@
   max-width: 300px;
   display: inline-block;
   float: left;
-
   .inside {
     padding: 20px;
     max-width: 300px;
   }
-
   h4 {
     font-size: 0.9rem;
     margin-bottom: 25px;
     font-weight: 500px;
     text-transform: uppercase;
   }
-
   select {
     background: transparent;
     padding: 10px;
@@ -33,7 +30,6 @@
     margin-bottom: 25px;
     width: 100%;
   }
-
   .filters {
     .title {
       font-size: 0.9rem;
@@ -41,7 +37,6 @@
       margin-bottom: 1rem;
       color: $darkgrey;
     }
-
     input[type="text"] {
       border-radius: 5px;
       font-size: 1rem;
@@ -51,7 +46,6 @@
       margin-right: 2.5%;
       margin-bottom: 1rem;
     }
-
     &.extras {
       label {
         display: block;
@@ -72,7 +66,6 @@
   display: inline-block;
   padding: 15px;
   background: $offwhite;
-
   .search-area {
     input[type="text"] {
       width: 70%;
@@ -88,16 +81,13 @@
 
   .sortby-area {
     margin-bottom: 20px;
-
     .results {
       color: $darkgrey;
       font-size: 0.8rem;
       display: inline-block;
     }
-
     .sort-options {
       float: right;
-
       select {
         font-size: 0.9rem;
         font-weight: 300;
@@ -108,10 +98,8 @@
         margin-right: 15px;
         vertical-align: top;
       }
-
       .view {
         display: inline-block;
-
         .fa {
           margin-right: 15px;
           font-size: 1.5rem;
@@ -122,7 +110,6 @@
 
   .listings-results {
     margin-bottom: 60px;
-
     .listing {
       background: #fff;
       border-radius: 5px;
@@ -130,7 +117,6 @@
       -moz-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
       box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
     }
-
     .listing-img {
       color: white;
       padding: 15px;
@@ -147,17 +133,14 @@
       -moz-border-radius-topright: 5px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-
       &:hover {
         .details {
           opacity: 1;
         }
-
         .address {
           opacity: 0;
         }
       }
-
       .address {
         font-size: 1.3rem;
         text-transform: capitalize;
@@ -167,7 +150,6 @@
         transition: all 0.4s ease-in-out;
         text-shadow: 0 1px 4px rgba(91, 91, 91, 1);
       }
-
       .details {
         transition: all 0.4s ease-in-out;
         opacity: 0;
@@ -183,17 +165,14 @@
         -moz-border-radius-topright: 5px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4e02e5+0,9d1ced+100 */
-        background: rgba(78,2,229,.8);
-        /* Old browsers */
-        background: -moz-linear-gradient(-45deg, rgba(78,2,229,.8) 0%, rgba(157,28,237,.8) 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg, rgba(78,2,229,.8) 0%,rgba(157,28,237,.8) 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg, rgba(78,2,229,.8) 0%,rgba(157,28,237,.8) 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#4e02e5', endColorstr='#9d1ced',GradientType=1 );
-        /* IE6-9 fallback on horizontal gradient */
+        background: rgb(30,87,153);
+        background: -moz-linear-gradient(left,  rgba(30,87,153,1) 0%, rgba(32,124,202,1) 53%, rgba(125,185,232,1) 100%);
+        background: -webkit-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(32,124,202,1) 53%,rgba(125,185,232,1) 100%);
+        background: linear-gradient(to right,  rgba(30,87,153,1) 0%,rgba(32,124,202,1) 53%,rgba(125,185,232,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
+        &:hover {
+        opacity: 0.8;
+        }
         .user-img {
           width: 35px;
           height: 35px;
@@ -206,11 +185,9 @@
           -o-background-size: cover;
           background-size: cover;
         }
-
         .user-details {
           vertical-align: top;
           display: inline-block;
-
           .user-name {
             font-weight: 300;
             font-size: 0.9rem;
@@ -219,7 +196,6 @@
             margin-top: 3px;
             margin-bottom: 5px;
           }
-
           .post-date {
             font-size: 0.9rem;
             display: block;
@@ -230,13 +206,11 @@
         .listing-details {
           margin-top: 20px;
           margin-bottom: 10px;
-
           .fa {
             display: inline-block;
             font-size: 20px;
             margin-right: 15px;
           }
-
           span {
             font-weight: 300;
             font-size: 0.8rem;
@@ -245,7 +219,6 @@
             position: relative;
             top: 3px;
           }
-
           .floor-space {
             margin-bottom: 10px;
           }
@@ -255,14 +228,12 @@
 
     .bottom-info {
       padding: 20px 15px;
-
       .price {
         font-size: 1rem;
         display: block;
         margin-bottom: 10px;
         color: $darkgrey;
       }
-
       .location {
         font-size: 1.2rem;
         display: block;
@@ -280,9 +251,8 @@
   text-align: center;
   max-width: 150px;
   transition: background 0.3s ease-in-out;
-
   &:hover {
-    background: $pink;
+    background: #2E5EA6;
     cursor: pointer;
   }
 }
@@ -291,7 +261,6 @@
   width: 100%;
   display: block;
   text-align: center;
-
   .pages {
     margin: 0 auto;
     display: inline-block;
@@ -299,16 +268,14 @@
     -webkit-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
     -moz-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
     box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
-
     li {
       padding: 20px 30px;
       display: inline-block;
-
       &.active,
       &:hover {
         color: white;
         font-weight: 700;
-        background: $pink;
+        background: #2E5EA6;
         cursor: pointer;
       }
     }

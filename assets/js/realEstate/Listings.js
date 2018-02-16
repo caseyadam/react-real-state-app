@@ -5,7 +5,7 @@ export default class Header extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Joe'
+      name: 'Casey'
     }
     this.loopListings = this.loopListings.bind(this)
   }

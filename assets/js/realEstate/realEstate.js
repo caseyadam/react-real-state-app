@@ -1,7 +1,7 @@
 import React, { Component} from 'react'
 import ReactDOM from 'react-dom'
 import Header from './Header.js'
-import Filter from './Filter.js' 
+import Filter from './Filter.js'
 import Listings from './Listings.js'
 import listingsData from './data/listingsData.js'
 
@@ -140,7 +140,6 @@ class App extends Component {
     }, () => {
       console.log(this.state)
     })
-
   }
 
   render () {

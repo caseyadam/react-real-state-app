@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var listingsData = [{
   address: '20-34 grand ave',
-  city: 'Ridgewood',
+  city: 'Chicago',
   state: 'NY',
   rooms: 3,
   price: 220000,
@@ -31,7 +31,7 @@ var listingsData = [{
   image: 'https://www.adinahotels.com/wp-content/uploads/sites/4/2016/07/adina-melbourne-flinders-street-apartment-hotel-one-and-two-bedroom-apartment-2-2013.jpg'
 }, {
   address: '1 president plaza',
-  city: 'Richmond',
+  city: 'Portland',
   state: 'VA',
   rooms: 1,
   price: 345355,
@@ -41,7 +41,7 @@ var listingsData = [{
   image: 'https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2017/01/09/BostonGlobe.com/Lifestyle/Images/doherty_10names04_liv.jpg'
 }, {
   address: '889 beemore st',
-  city: 'Newark',
+  city: 'Hoboken',
   state: 'NJ',
   rooms: 0,
   price: 80000,
@@ -61,7 +61,7 @@ var listingsData = [{
   image: 'http://cdn.freshome.com/wp-content/uploads/2016/02/design-modern-apartment-1-1025x450.jpg'
 }, {
   address: '2 main st',
-  city: 'Bedstuy',
+  city: 'Seattle',
   state: 'NY',
   rooms: 2,
   price: 220000,
@@ -70,11 +70,21 @@ var listingsData = [{
   homeType: 'Multi Home',
   image: 'http://www.theproserve.com/wp-content/uploads/2013/03/apartment-complex-insurance.jpg'
 }, {
-  address: '730 gates ave',
+  address: '123 Fake St',
   city: 'Springfield',
   state: 'IN',
   rooms: 1,
   price: 150000,
+  floorSpace: 2000,
+  extras: ['elevator', 'gym'],
+  homeType: 'Room',
+  image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+}, {
+  address: '456 Warble Ct',
+  city: 'Example',
+  state: 'OO',
+  rooms: 1,
+  price: 200000,
   floorSpace: 2000,
   extras: ['elevator', 'gym'],
   homeType: 'Room',
@@ -157,7 +167,6 @@ var App = function (_Component) {
       view: 'box',
       search: ''
     };
-
     _this.change = _this.change.bind(_this);
     _this.filteredData = _this.filteredData.bind(_this);
     _this.populateForms = _this.populateForms.bind(_this);
@@ -168,11 +177,9 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-
       var listingsData = this.state.listingsData.sort(function (a, b) {
         return a.price - b.price;
       });
-
       this.setState({
         listingsData: listingsData
       });
@@ -184,7 +191,6 @@ var App = function (_Component) {
 
       var name = event.target.name;
       var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
-
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
         _this2.filteredData();
@@ -257,7 +263,6 @@ var App = function (_Component) {
       });
       cities = new Set(cities);
       cities = [].concat(_toConsumableArray(cities));
-
       cities = cities.sort();
 
       // homeType
@@ -266,7 +271,6 @@ var App = function (_Component) {
       });
       homeTypes = new Set(homeTypes);
       homeTypes = [].concat(_toConsumableArray(homeTypes));
-
       homeTypes = homeTypes.sort();
 
       // bedrooms
@@ -275,7 +279,6 @@ var App = function (_Component) {
       });
       bedrooms = new Set(bedrooms);
       bedrooms = [].concat(_toConsumableArray(bedrooms));
-
       bedrooms = bedrooms.sort();
 
       this.setState({
@@ -347,7 +350,7 @@ var Filter = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Filter.__proto__ || Object.getPrototypeOf(Filter)).call(this));
 
     _this.state = {
-      name: 'Joe'
+      name: 'Casey'
     };
     _this.cities = _this.cities.bind(_this);
     _this.homeTypes = _this.homeTypes.bind(_this);
@@ -424,7 +427,7 @@ var Filter = function (_Component) {
           _react2.default.createElement(
             'h4',
             null,
-            'Filter'
+            'OPTIONS'
           ),
           _react2.default.createElement(
             'label',
@@ -444,7 +447,7 @@ var Filter = function (_Component) {
           _react2.default.createElement(
             'label',
             { htmlFor: 'city' },
-            'Home Type'
+            'Property Type'
           ),
           _react2.default.createElement(
             'select',
@@ -582,7 +585,7 @@ var Header = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
     _this.state = {
-      name: 'Joe'
+      name: 'Casey'
     };
     return _this;
   }
@@ -596,7 +599,16 @@ var Header = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'logo' },
-          ' Logo'
+          _react2.default.createElement('img', { src: '/img/home-icon.png' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'title' },
+          _react2.default.createElement(
+            'span',
+            null,
+            'COZY HOME'
+          )
         ),
         _react2.default.createElement(
           'nav',
@@ -604,23 +616,38 @@ var Header = function (_Component) {
           _react2.default.createElement(
             'a',
             { href: '#' },
-            'Create Ads'
+            'Buy'
           ),
           _react2.default.createElement(
             'a',
             { href: '#' },
-            'About Us'
+            'Rent'
           ),
           _react2.default.createElement(
             'a',
             { href: '#' },
-            'Log in'
+            'Sell'
+          ),
+          _react2.default.createElement(
+            'a',
+            { href: '#' },
+            'Mortgage'
           ),
           _react2.default.createElement(
             'a',
             { href: '#', className: 'register-btn' },
             'Register'
+          ),
+          _react2.default.createElement(
+            'a',
+            { href: '#', className: 'register-btn' },
+            'Sign In'
           )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'top-img' },
+          _react2.default.createElement('img', { src: '/img/homes1.jpg', className: 'city', alt: 'several apartment buildings' })
         )
       );
     }
@@ -666,7 +693,7 @@ var Header = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
     _this.state = {
-      name: 'Joe'
+      name: 'Casey'
     };
     _this.loopListings = _this.loopListings.bind(_this);
     return _this;

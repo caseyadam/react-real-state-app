@@ -1,7 +1,7 @@
 var listingsData = [
   {
     address: '20-34 grand ave',
-    city: 'Ridgewood',
+    city: 'Chicago',
     state: 'NY',
     rooms: 3,
     price: 220000,
@@ -29,7 +29,7 @@ var listingsData = [
   },
   {
     address: '1 president plaza',
-    city: 'Richmond',
+    city: 'Portland',
     state: 'VA',
     rooms: 1,
     price: 345355,
@@ -43,7 +43,7 @@ var listingsData = [
   },
   {
     address: '889 beemore st',
-    city: 'Newark',
+    city: 'Hoboken',
     state: 'NJ',
     rooms: 0,
     price: 80000,
@@ -71,7 +71,7 @@ var listingsData = [
   },
   {
     address: '2 main st',
-    city: 'Bedstuy',
+    city: 'Seattle',
     state: 'NY',
     rooms: 2,
     price: 220000,
@@ -84,11 +84,25 @@ var listingsData = [
     image: 'http://www.theproserve.com/wp-content/uploads/2013/03/apartment-complex-insurance.jpg'
   },
   {
-    address: '730 gates ave',
+    address: '123 Fake St',
     city: 'Springfield',
     state: 'IN',
     rooms: 1,
     price: 150000,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Room',
+    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+  },
+  {
+    address: '456 Warble Ct',
+    city: 'Example',
+    state: 'OO',
+    rooms: 1,
+    price: 200000,
     floorSpace: 2000,
     extras: [
       'elevator',
