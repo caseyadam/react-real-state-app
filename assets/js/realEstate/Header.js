@@ -28,7 +28,7 @@ export default class Header extends Component {
       </nav>
 
       <div className="top-img">
-        <img src="/img/homes1.jpg" className="city" alt="several apartment buildings"/>
+        <img src="/img/homes1.3.jpg" className="city" alt="several apartment buildings"/>
       </div>
 
       </header>)

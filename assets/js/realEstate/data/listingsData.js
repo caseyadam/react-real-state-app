@@ -110,6 +110,104 @@ var listingsData = [
     ],
     homeType: 'Room',
     image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+  },
+  {
+    address: '456 Warble Ct',
+    city: 'Example',
+    state: 'OO',
+    rooms: 1,
+    price: 200000,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Room',
+    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+  },
+  {
+    address: '456 Warble Ct',
+    city: 'Example',
+    state: 'OO',
+    rooms: 1,
+    price: 200000,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Room',
+    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+  },
+  {
+    address: '456 Warble Ct',
+    city: 'Example',
+    state: 'OO',
+    rooms: 1,
+    price: 200000,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Room',
+    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+  },
+  {
+    address: '456 Warble Ct',
+    city: 'Example',
+    state: 'OO',
+    rooms: 1,
+    price: 200000,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Room',
+    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+  },
+  {
+    address: '456 Warble Ct',
+    city: 'Example',
+    state: 'OO',
+    rooms: 1,
+    price: 200000,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Room',
+    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+  },
+  {
+    address: '456 Warble Ct',
+    city: 'Example',
+    state: 'OO',
+    rooms: 1,
+    price: 200000,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Room',
+    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+  },
+  {
+    address: '456 Warble Ct',
+    city: 'Example',
+    state: 'OO',
+    rooms: 1,
+    price: 200000,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Room',
+    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
   }
 ]
 
