@@ -15,7 +15,7 @@ export default class Header extends Component {
       </div>
 
       <div className="title">
-        <span>COZY HOME</span>
+        <span>MY COZY HOME</span>
       </div>
 
       <nav>

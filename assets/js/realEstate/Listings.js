@@ -1,24 +1,30 @@
 import React, { Component} from 'react'
 
-
 export default class Header extends Component {
+  //The constructor for a React component is called before it is mounted. If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
   constructor () {
+    //When implementing the constructor for a React.Component subclass, you should call super(props) before any other statement. Otherwise, this.props will be undefined in the constructor, which can lead to bugs.
     super()
+    //The constructor is the right place to initialize state. To do so, just assign an object to this.state; don’t try to call setState() from the constructor.
     this.state = {
-      name: 'Casey'
+      name: 'InitializesState'
     }
+    //The constructor is also often used to bind event handlers to the class instance.
     this.loopListings = this.loopListings.bind(this)
   }
-  loopListings () {
-    var {listingsData} = this.props
 
+  loopListings () {
+    //pulls in all the data from listingsData and assigns it to this.props
+    var {listingsData} = this.props
+    //if user searches for city that doesn't exist, this notification is displayed
     if(listingsData == undefined || listingsData.length == 0) {
       return "Sorry your filter did not match any listing"
     }
 
+    //HERE WE ADD THE HOUSE INFO BOXES AND THE TWO VIEW TYPES
     return listingsData.map((listing, index) => {
+      // THIS IS THE BOX VIEW OPTION
       if(this.props.globalState.view == 'box') {
-        // THIS IS BOX VIEW
         return (<div className="col-md-3" key={index}>
           <div className="listing">
             <div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
@@ -27,7 +33,6 @@ export default class Header extends Component {
                 <div className="col-md-3">
                   <div className="user-img"> </div>
                 </div>
-
                 <div className="col-md-9">
                   <div className="user-details">
                     <span className="user-name">Nina Smith</span>
@@ -43,13 +48,10 @@ export default class Header extends Component {
                       <span>{listing.rooms} bedrooms</span>
                     </div>
                   </div>
-
                   <div className="view-btn">
                     View Listing
                   </div>
                 </div>
-
-
               </div>
             </div>
             <div className="bottom-info">
@@ -59,7 +61,7 @@ export default class Header extends Component {
           </div>
         </div>)
       } else {
-        // THIS IS LONG VIEW
+        // THIS IS LONG VIEW OPTION
         return (<div className="col-md-12 col-lg-6" key={index}>
           <div className="listing">
             <div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
@@ -96,16 +98,15 @@ export default class Header extends Component {
           </div>
         </div>)
       }
-
-
     })
   }
+
   render () {
     return (<section id="listings">
     <section className="search-area">
       <input type="text" name="search" onChange={this.props.change} />
     </section>
-
+    {/* SORTING OPTIONS */}
     <section className="sortby-area">
       <div className="results">{this.props.globalState.filteredData.length} results found</div>
       <div className="sort-options">
@@ -120,12 +121,14 @@ export default class Header extends Component {
       </div>
     </section>
 
+{/* THIS DISPLAYS THE LISTING BOXES */}
     <section className="listings-results">
-    <div className="row">
-    {this.loopListings()}
-    </div>
+      <div className="row">
+        {this.loopListings()}
+      </div>
     </section>
 
+    {/* PAGINATION */}
     <section id="pagination">
     <div className="row">
       <ul className="pages">

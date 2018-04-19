@@ -3,20 +3,19 @@ import ReactDOM from 'react-dom'
 import Header from './Header.js'
 import Filter from './Filter.js'
 import Listings from './Listings.js'
-import Footer from './Footer.js'
 import listingsData from './data/listingsData.js'
 
 class App extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Joe',
+      name: 'Initialize',
       listingsData,
       city: 'All',
       homeType: 'All',
       bedrooms: '0',
       min_price: 0,
-      max_price: 10000000,
+      max_price: 100,
       min_floor_space: 0,
       max_floor_space: 50000,
       elavator: false,
@@ -29,12 +28,12 @@ class App extends Component {
       view: 'box',
       search: ''
     }
+
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForms = this.populateForms.bind(this)
     this.changeView = this.changeView.bind(this)
   }
-
   componentWillMount(){
     var listingsData = this.state.listingsData.sort((a, b) => {
       return a.price - b.price
@@ -50,11 +49,10 @@ class App extends Component {
     this.setState({
       [name]: value
     }, () => {
-      console.log(this.state)
+      // console.log(this.state)
       this.filteredData()
     })
   }
-
   changeView(viewName){
     this.setState({
       view: viewName
@@ -63,7 +61,11 @@ class App extends Component {
 
   filteredData(){
     var newData = this.state.listingsData.filter((item) => {
-      return item.price >= this.state.min_price && item.price <= this.state.max_price && item.floorSpace >= this.state.min_floor_space && item.floorSpace <= this.state.max_floor_space && item.rooms >= this.state.bedrooms
+      return item.price >= this.state.min_price
+      && item.price <= this.state.max_price
+      && item.floorSpace >= this.state.min_floor_space
+      && item.floorSpace <= this.state.max_floor_space
+      && item.rooms >= this.state.bedrooms
     })
 
     if(this.state.city != "All") {
@@ -106,7 +108,6 @@ class App extends Component {
       filteredData: newData
     })
   }
-
   populateForms() {
     // city
     var cities = this.state.listingsData.map((item) => {
@@ -114,6 +115,7 @@ class App extends Component {
     })
     cities = new Set(cities)
     cities = [...cities]
+
     cities = cities.sort()
 
     // homeType
@@ -122,6 +124,7 @@ class App extends Component {
     })
     homeTypes = new Set(homeTypes)
     homeTypes = [...homeTypes]
+
     homeTypes = homeTypes.sort()
 
     // bedrooms
@@ -130,6 +133,7 @@ class App extends Component {
     })
     bedrooms = new Set(bedrooms)
     bedrooms = [...bedrooms]
+
     bedrooms = bedrooms.sort()
 
     this.setState({
@@ -141,6 +145,7 @@ class App extends Component {
     }, () => {
       console.log(this.state)
     })
+
   }
 
   render () {

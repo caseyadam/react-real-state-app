@@ -11,7 +11,7 @@ export default class Footer extends Component {
     return (<footer>
 
       <div className="footer-info">
-        <span>C Hello Home.com LLC</span>
+        <span>My Cozy Home</span>
         <br />
         <ul>
           <li><a href="#">Equal Housing Opportunity</a></li>
