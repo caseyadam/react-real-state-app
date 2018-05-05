@@ -4,31 +4,31 @@ export default class Header extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Casey'
+      name: 'InitializeState'
     }
   }
   render () {
     return (<header>
 
       <div className="logo">
-        <img src="/img/home-icon.png" />
+        <img src="/img/icons/spartan.png" />
       </div>
 
       <div className="title">
-        <span>MY COZY HOME</span>
+        <span>LEONIDAS surf & sport</span>
       </div>
 
       <nav>
-        <a href="#">Buy</a>
-        <a href="#">Rent</a>
-        <a href="#">Sell</a>
-        <a href="#">Mortgage</a>
-        <a href="#" className="register-btn">Register</a>
-        <a href="#" className="register-btn">Sign In</a>
+        <a href="#">Surfing</a>
+        <a href="#">Training</a>
+        <a href="#">BJJ</a>
+        <a href="#">Apparel</a>
+        <a href="#">Brands</a>
+        <a href="#" className="register-btn">Login</a>
       </nav>
 
       <div className="top-img">
-        <img src="/img/homes1.3.jpg" className="city" alt="several apartment buildings"/>
+        <img src="/img/surfBG.jpg" className="city" alt="several apartment buildings"/>
       </div>
 
       </header>)
