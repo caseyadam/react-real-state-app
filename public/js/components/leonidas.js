@@ -50,13 +50,13 @@ var Header = function (_Component) {
 
       // Pulls in all the data from listingsData and assigns it to this.props
       var listingsData = this.props.listingsData;
-      // If user searches for city that doesn't exist, this notification is displayed
+      // If user searches for a brand that doesn't exist, this notification is displayed
 
       if (listingsData == undefined || listingsData.length == 0) {
         return "Sorry, your filter did not match any listing.";
       }
 
-      //HOUSE INFO BOXES AND THE TWO VIEW TYPES
+      // INFO BOXES AND THE TWO VIEW TYPES
       return listingsData.map(function (listing, index) {
         // THIS IS THE BOX VIEW OPTION
         if (_this2.props.globalState.view == 'box') {
@@ -74,12 +74,8 @@ var Header = function (_Component) {
                   { className: 'details' },
                   _react2.default.createElement(
                     'div',
-                    { className: 'col-md-9' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'view-btn' },
-                      'View Item'
-                    )
+                    { className: 'view-btn' },
+                    'View Item'
                   )
                 )
               ),
@@ -90,7 +86,7 @@ var Header = function (_Component) {
                   'span',
                   { className: 'location' },
                   ' ',
-                  listing.city,
+                  listing.brand,
                   ' '
                 ),
                 _react2.default.createElement(
@@ -118,12 +114,8 @@ var Header = function (_Component) {
                   { className: 'details' },
                   _react2.default.createElement(
                     'div',
-                    { className: 'col-md-9' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'view-btn' },
-                      'View Item'
-                    )
+                    { className: 'view-btn-long' },
+                    'View Item'
                   )
                 )
               ),
@@ -140,7 +132,7 @@ var Header = function (_Component) {
                   'span',
                   { className: 'location' },
                   ' ',
-                  listing.city,
+                  listing.brand,
                   ' '
                 )
               )
@@ -224,274 +216,139 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var listingsData = [{
-  address: '20-34 grand ave',
-  city: 'Phalanx',
-  state: 'NY',
-  rooms: 'Mens',
+  brand: 'Phalanx',
   price: 65,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-phalanx1-md.jpg'
 }, {
-  address: '3 universal st',
-  city: 'RVCA',
-  state: 'FL',
-  rooms: 'Mens',
+  brand: 'RVCA',
   price: 80,
-  floorSpace: 1430,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-rvca1-md.jpg'
 }, {
-  address: '1 president plaza',
-  city: 'Scramble',
-  state: 'VA',
-  rooms: 'Mens',
+  brand: 'Scramble',
   price: 50,
-  floorSpace: 2400,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-scramble1-md.jpg'
 }, {
-  address: '889 beemore st',
-  city: 'Reebok',
-  state: 'NJ',
-  rooms: 'Mens',
+  brand: 'Reebok',
   price: 75,
-  floorSpace: 1000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-reebok1-md.jpg'
 }, {
-  address: '43 hollywood blvd',
-  city: 'Hayabusa',
-  state: 'CA',
-  rooms: 'Mens',
+  brand: 'Hayabusa',
   price: 60,
-  floorSpace: 3000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-hayabusa1-md.jpg'
 }, {
-  address: '2 main st',
-  city: 'Virus',
-  state: 'NY',
-  rooms: 'Mens',
+  brand: 'Virus',
   price: 70,
-  floorSpace: 2000,
-  extras: ['elevator', 'pool'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-virus1-md.jpg'
 }, {
-  address: '123 Fake St',
-  city: 'Phalanx',
-  state: 'IN',
-  rooms: 'Mens',
+  brand: 'Phalanx',
   price: 65,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-phalanx2-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'RVCA',
-  state: 'OO',
-  rooms: 'Mens',
+  brand: 'RVCA',
   price: 80,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-rvca2-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Virus',
-  state: 'OO',
-  rooms: 'Mens',
+  brand: 'Virus',
   price: 70,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-virus2-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Billabong',
-  state: 'OO',
-  rooms: 'Mens',
+  brand: 'Billabong',
   price: 65,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-billabong2-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Phalanx',
-  state: 'OO',
-  rooms: 'Mens',
+  brand: 'Phalanx',
   price: 60,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-phalanx3-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Billabong',
-  state: 'OO',
-  rooms: 'Mens',
+  brand: 'Billabong',
   price: 60,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-billabong1-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Hayabusa',
-  state: 'OO',
-  rooms: 'Mens',
+  brand: 'Hayabusa',
   price: 70,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-hayabusa2-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Scramble',
-  state: 'OO',
-  rooms: 'Mens',
+  brand: 'Scramble',
   price: 70,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/mens/m-scramble2-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Reebok',
-  state: 'OO',
-  rooms: 'Mens',
+  brand: 'Reebok',
   price: 75,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Compression Pants',
+  itemType: 'Compression Pants',
   image: '/img/mens/m-reebok2-md.jpg'
 }, {
-  address: '20-34 grand ave',
-  city: 'Phalanx',
-  state: 'NY',
-  rooms: 'Kids',
+  brand: 'Phalanx',
   price: 55,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/kids/k-phalanx-rashguard-md.png'
 }, {
-  address: '3 universal st',
-  city: 'RVCA',
-  state: 'FL',
-  rooms: 'Kids',
+  brand: 'RVCA',
   price: 50,
-  floorSpace: 1430,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/kids/k-rvca-rashguard1-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Billabong',
-  state: 'OO',
-  rooms: 'Womens',
+  brand: 'Billabong',
   price: 60,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Shorts',
+  itemType: 'Shorts',
   image: '/img/womens/w-billabong-boardshorts1-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Billabong',
-  state: 'OO',
-  rooms: 'Womens',
+  brand: 'Billabong',
   price: 60,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Shorts',
+  itemType: 'Shorts',
   image: '/img/womens/w-billabong-boardshorts2-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Billabong',
-  state: 'OO',
-  rooms: 'Womens',
+  brand: 'Billabong',
   price: 60,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/womens/w-billabong-rashguard1-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Billabong',
-  state: 'OO',
-  rooms: 'Womens',
+  brand: 'Billabong',
   price: 60,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/womens/w-billabong-rashguard2-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Reebok',
-  state: 'OO',
-  rooms: 'Womens',
+  brand: 'Reebok',
   price: 75,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Shorts',
+  itemType: 'Shorts',
   image: '/img/womens/w-reebok-short1-md.jpg'
 }, {
-  address: '456 Warble Ct',
-  city: 'Reebok',
-  state: 'OO',
-  rooms: 'Womens',
+  brand: 'Reebok',
   price: 75,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Compression Pants',
+  itemType: 'Compression Pants',
   image: '/img/womens/w-reebok-pants1-md.jpg'
 }, {
-  address: '20-34 grand ave',
-  city: 'Phalanx',
-  state: 'NY',
-  rooms: 'Mens',
+  brand: 'Phalanx',
   price: 65,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Shorts',
+  itemType: 'Shorts',
   image: '/img/mens/m-phalanx-shorts1-md.jpg'
 }, {
-  address: '20-34 grand ave',
-  city: 'Phalanx',
-  state: 'NY',
-  rooms: 'Mens',
+  brand: 'Phalanx',
   price: 65,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Shorts',
+  itemType: 'Shorts',
   image: '/img/mens/m-phalanx-shorts2-md.jpg'
 }, {
-  address: '20-34 grand ave',
-  city: 'Phalanx',
-  state: 'NY',
-  rooms: 'Womens',
+  brand: 'Phalanx',
   price: 65,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/womens/w-phalanx-rashguard1-md.jpg'
 }, {
-  address: '20-34 grand ave',
-  city: 'Phalanx',
-  state: 'NY',
-  rooms: 'Womens',
+  brand: 'Phalanx',
   price: 65,
-  floorSpace: 2000,
-  extras: ['elevator', 'gym'],
-  homeType: 'Rashguard',
+  itemType: 'Rashguard',
   image: '/img/womens/w-phalanx-rashguard2-md.jpg'
 }];
 
@@ -558,17 +415,10 @@ var App = function (_Component) {
     _this.state = {
       name: 'InitializeState',
       listingsData: _listingsData2.default,
-      city: 'All',
-      homeType: 'All',
-      bedrooms: 'All',
+      brand: 'All',
+      itemType: 'All',
       min_price: 0,
       max_price: 100,
-      min_floor_space: 0,
-      max_floor_space: 50000,
-      elavator: false,
-      finished_basement: false,
-      gym: false,
-      swimming_pool: false,
       filteredData: _listingsData2.default,
       populateFormsData: '',
       sortby: 'price-dsc',
@@ -616,27 +466,20 @@ var App = function (_Component) {
       var _this3 = this;
 
       var newData = this.state.listingsData.filter(function (item) {
-        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorSpace >= _this3.state.min_floor_space && item.floorSpace <= _this3.state.max_floor_space;
-        // && item.rooms >= this.state.bedrooms
+        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price;
       });
 
-      if (this.state.city != "All") {
+      if (this.state.brand != "All") {
         newData = newData.filter(function (item) {
-          return item.city == _this3.state.city;
+          return item.brand == _this3.state.brand;
         });
       }
 
-      if (this.state.homeType != "All") {
+      if (this.state.itemType != "All") {
         newData = newData.filter(function (item) {
-          return item.homeType == _this3.state.homeType;
+          return item.itemType == _this3.state.itemType;
         });
       }
-      //EXPERIMENT
-      // if(this.state.rooms != "All") {
-      //   newData = newData.filter((item) => {
-      //     return item.rooms == this.state.rooms
-      //   })
-      // }
 
       if (this.state.sortby == 'price-dsc') {
         newData = newData.sort(function (a, b) {
@@ -652,9 +495,9 @@ var App = function (_Component) {
       //Search by brand
       if (this.state.search != '') {
         newData = newData.filter(function (item) {
-          var city = item.city.toLowerCase();
+          var brand = item.brand.toLowerCase();
           var searchText = _this3.state.search.toLowerCase();
-          var n = city.match(searchText);
+          var n = brand.match(searchText);
 
           if (n != null) {
             return true;
@@ -671,38 +514,28 @@ var App = function (_Component) {
     value: function populateForms() {
       var _this4 = this;
 
-      // city
-      var cities = this.state.listingsData.map(function (item) {
-        return item.city;
+      // brand
+      var brands = this.state.listingsData.map(function (item) {
+        return item.brand;
       });
-      cities = new Set(cities);
-      cities = [].concat(_toConsumableArray(cities));
+      brands = new Set(brands);
+      brands = [].concat(_toConsumableArray(brands));
 
-      cities = cities.sort();
+      brands = brands.sort();
 
-      // homeType
-      var homeTypes = this.state.listingsData.map(function (item) {
-        return item.homeType;
+      // itemType
+      var itemTypes = this.state.listingsData.map(function (item) {
+        return item.itemType;
       });
-      homeTypes = new Set(homeTypes);
-      homeTypes = [].concat(_toConsumableArray(homeTypes));
+      itemTypes = new Set(itemTypes);
+      itemTypes = [].concat(_toConsumableArray(itemTypes));
 
-      homeTypes = homeTypes.sort();
-
-      // bedrooms
-      // var bedrooms = this.state.listingsData.map((item) => {
-      //   return item.rooms
-      // })
-      // bedrooms = new Set(bedrooms)
-      // bedrooms = [...bedrooms]
-      //
-      // bedrooms = bedrooms.sort()
+      itemTypes = itemTypes.sort();
 
       this.setState({
         populateFormsData: {
-          homeTypes: homeTypes,
-          // bedrooms,
-          cities: cities
+          itemTypes: itemTypes,
+          brands: brands
         }
       }, function () {
         console.log(_this4.state);
@@ -770,9 +603,8 @@ var Filter = function (_Component) {
     _this.state = {
       name: 'InitializeState'
     };
-    _this.cities = _this.cities.bind(_this);
-    _this.homeTypes = _this.homeTypes.bind(_this);
-    // this.bedrooms = this.bedrooms.bind(this)
+    _this.brands = _this.brands.bind(_this);
+    _this.itemTypes = _this.itemTypes.bind(_this);
     return _this;
   }
 
@@ -784,12 +616,12 @@ var Filter = function (_Component) {
     // adds data to the Brand filter
 
   }, {
-    key: 'cities',
-    value: function cities() {
-      if (this.props.globalState.populateFormsData.cities != undefined) {
-        var cities = this.props.globalState.populateFormsData.cities;
+    key: 'brands',
+    value: function brands() {
+      if (this.props.globalState.populateFormsData.brands != undefined) {
+        var brands = this.props.globalState.populateFormsData.brands;
 
-        return cities.map(function (item) {
+        return brands.map(function (item) {
           return _react2.default.createElement(
             'option',
             { key: item, value: item },
@@ -801,12 +633,12 @@ var Filter = function (_Component) {
     // adds data to the Types filter option in the left hand column
 
   }, {
-    key: 'homeTypes',
-    value: function homeTypes() {
-      if (this.props.globalState.populateFormsData.homeTypes != undefined) {
-        var homeTypes = this.props.globalState.populateFormsData.homeTypes;
+    key: 'itemTypes',
+    value: function itemTypes() {
+      if (this.props.globalState.populateFormsData.itemTypes != undefined) {
+        var itemTypes = this.props.globalState.populateFormsData.itemTypes;
 
-        return homeTypes.map(function (item) {
+        return itemTypes.map(function (item) {
           return _react2.default.createElement(
             'option',
             { key: item, value: item },
@@ -815,17 +647,6 @@ var Filter = function (_Component) {
         });
       }
     }
-    // adds data to the Men/Womens/Kids filter option in the left hand column
-    // bedrooms() {
-    //   if(this.props.globalState.populateFormsData.bedrooms != undefined) {
-    //     var { bedrooms } = this.props.globalState.populateFormsData
-    //     return bedrooms.map((item) => {
-    //       return(
-    //         <option key={item} value={item}>{item}</option>
-    //       )
-    //     })
-    //   }
-    // }
 
     // LEFT HAND COLUMN WITH FILTER OPTIONS
 
@@ -845,33 +666,33 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'label',
-            { htmlFor: 'city' },
+            { htmlFor: 'brand' },
             'BRAND'
           ),
           _react2.default.createElement(
             'select',
-            { name: 'city', className: 'filters city', onChange: this.props.change },
+            { name: 'brand', className: 'filters brand', onChange: this.props.change },
             _react2.default.createElement(
               'option',
               { value: 'All' },
               'All'
             ),
-            this.cities()
+            this.brands()
           ),
           _react2.default.createElement(
             'label',
-            { htmlFor: 'city' },
+            { htmlFor: 'brand' },
             'TYPE'
           ),
           _react2.default.createElement(
             'select',
-            { name: 'homeType', className: 'filters homeType', onChange: this.props.change },
+            { name: 'itemType', className: 'filters itemType', onChange: this.props.change },
             _react2.default.createElement(
               'option',
               { value: 'All' },
               'All'
             ),
-            this.homeTypes()
+            this.itemTypes()
           ),
           _react2.default.createElement(
             'div',

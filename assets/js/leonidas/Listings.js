@@ -16,12 +16,12 @@ export default class Header extends Component {
   loopListings () {
     // Pulls in all the data from listingsData and assigns it to this.props
     var {listingsData} = this.props
-    // If user searches for city that doesn't exist, this notification is displayed
+    // If user searches for a brand that doesn't exist, this notification is displayed
     if(listingsData == undefined || listingsData.length == 0) {
       return "Sorry, your filter did not match any listing."
     }
 
-    //HOUSE INFO BOXES AND THE TWO VIEW TYPES
+    // INFO BOXES AND THE TWO VIEW TYPES
     return listingsData.map((listing, index) => {
       // THIS IS THE BOX VIEW OPTION
       if(this.props.globalState.view == 'box') {
@@ -29,15 +29,15 @@ export default class Header extends Component {
           <div className="listing">
             <div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
               <div className="details">
-                <div className="col-md-9">
+                {/* <div className="col-md-9"> */}
                   <div className="view-btn">
                     View Item
                   </div>
-                </div>
+                {/* </div> */}
               </div>
             </div>
             <div className="bottom-info">
-              <span className="location"> {listing.city} </span>
+              <span className="location"> {listing.brand} </span>
               <span className="price">${listing.price}</span>
             </div>
           </div>
@@ -48,16 +48,16 @@ export default class Header extends Component {
           <div className="listing">
             <div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
               <div className="details">
-                <div className="col-md-9">
-                  <div className="view-btn">
+                {/* <div className="col-md-9"> */}
+                  <div className="view-btn-long">
                     View Item
                   </div>
-                </div>
+                {/* </div> */}
               </div>
             </div>
             <div className="bottom-info">
               <span className="price">${listing.price}</span>
-              <span className="location"> {listing.city} </span>
+              <span className="location"> {listing.brand} </span>
             </div>
           </div>
         </div>)

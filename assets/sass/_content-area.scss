@@ -128,29 +128,15 @@
     margin-bottom: 60px;
     .listing {
       background: $offwhite;
-      // border-radius: 5px;
       -webkit-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
       -moz-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
       box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
     }
     .listing-img {
       color: $offwhite;
-      // height: 100%;
-      // width: 100%;
       padding: 15px;
       position: relative;
-      // background: url("http://cdn.freshome.com/wp-content/uploads/2014/04/Gorgeous-evening-view-of-Russet-Residence--1025x450.jpg") no-repeat center center;
-      // -webkit-background-size: cover;
-      // -moz-background-size: cover;
-      // -o-background-size: cover;
-      // background-size: cover;
       min-height: 200px;
-      // -webkit-border-top-left-radius: 5px;
-      // -webkit-border-top-right-radius: 5px;
-      // -moz-border-radius-topleft: 5px;
-      // -moz-border-radius-topright: 5px;
-      // border-top-left-radius: 5px;
-      // border-top-right-radius: 5px;
       &:hover {
         .details {
           opacity: 1;
@@ -191,18 +177,6 @@
         &:hover {
         opacity: 0.8;
         }
-        // .user-img {
-        //   width: 35px;
-        //   height: 35px;
-        //   border-radius: 50%;
-        //   border: 2px solid $offwhite;
-        //   display: inline-block;
-        //   background: url("http://cdn.freshome.com/wp-content/uploads/2014/04/Gorgeous-evening-view-of-Russet-Residence--1025x450.jpg") no-repeat center center;
-        //   -webkit-background-size: cover;
-        //   -moz-background-size: cover;
-        //   -o-background-size: cover;
-        //   background-size: cover;
-        // }
         .user-details {
           vertical-align: top;
           display: inline-block;
@@ -263,6 +237,22 @@
 
 .view-btn {
   background: black;
+  margin: 35% 0 0 5%;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 150px;
+  transition: background 0.3s ease-in-out;
+  &:hover {
+    background: $darkBlue;
+    cursor: pointer;
+  }
+}
+
+.view-btn-long {
+  background: black;
+  margin: 15% 0 0 30%;
   padding: 8px;
   font-size: 0.9rem;
   border-radius: 5px;
