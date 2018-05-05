@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 100vh;
 }
+
 #filter {
   background: $grey;
   width: 30%;
@@ -16,15 +17,15 @@
   h4 {
     font-size: 0.9rem;
     margin-bottom: 25px;
-    font-weight: 500px;
+    font-weight: 500;
     text-transform: uppercase;
   }
   select {
     background: transparent;
     padding: 10px;
     font-size: 14px;
-    font-weight: 500;
-    color: #1b1b1b;
+    font-weight: 300;
+    color: $black;
     display: block;
     margin-bottom: 25px;
     width: 100%;
@@ -50,7 +51,6 @@
         display: block;
         width: 100%;
         padding: 10px 0;
-
         input[type="checkbox"] {
           float: right;
         }
@@ -74,10 +74,27 @@
       border-bottom: 1px solid $darkgrey;
       margin-bottom: 20px;
       font-weight: 100;
-      color: $lightgrey;
+      color: $black;
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $darkgrey;
+        opacity: .5; /* Firefox */
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $darkgrey;
+        opacity: .5;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $darkgrey;
+        opacity: .5;
+    }
+    input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    input:focus:-moz-placeholder {
+      color: transparent;
     }
   }
-
   .sortby-area {
     margin-bottom: 20px;
     .results {
@@ -110,28 +127,30 @@
   .listings-results {
     margin-bottom: 60px;
     .listing {
-      background: #fff;
-      border-radius: 5px;
+      background: $offwhite;
+      // border-radius: 5px;
       -webkit-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
       -moz-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
       box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
     }
     .listing-img {
-      color: white;
+      color: $offwhite;
+      // height: 100%;
+      // width: 100%;
       padding: 15px;
       position: relative;
-      background: url("http://cdn.freshome.com/wp-content/uploads/2014/04/Gorgeous-evening-view-of-Russet-Residence--1025x450.jpg") no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+      // background: url("http://cdn.freshome.com/wp-content/uploads/2014/04/Gorgeous-evening-view-of-Russet-Residence--1025x450.jpg") no-repeat center center;
+      // -webkit-background-size: cover;
+      // -moz-background-size: cover;
+      // -o-background-size: cover;
+      // background-size: cover;
       min-height: 200px;
-      -webkit-border-top-left-radius: 5px;
-      -webkit-border-top-right-radius: 5px;
-      -moz-border-radius-topleft: 5px;
-      -moz-border-radius-topright: 5px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      // -webkit-border-top-left-radius: 5px;
+      // -webkit-border-top-right-radius: 5px;
+      // -moz-border-radius-topleft: 5px;
+      // -moz-border-radius-topright: 5px;
+      // border-top-left-radius: 5px;
+      // border-top-right-radius: 5px;
       &:hover {
         .details {
           opacity: 1;
@@ -172,18 +191,18 @@
         &:hover {
         opacity: 0.8;
         }
-        .user-img {
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
-          border: 2px solid white;
-          display: inline-block;
-          background: url("http://cdn.freshome.com/wp-content/uploads/2014/04/Gorgeous-evening-view-of-Russet-Residence--1025x450.jpg") no-repeat center center;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-        }
+        // .user-img {
+        //   width: 35px;
+        //   height: 35px;
+        //   border-radius: 50%;
+        //   border: 2px solid $offwhite;
+        //   display: inline-block;
+        //   background: url("http://cdn.freshome.com/wp-content/uploads/2014/04/Gorgeous-evening-view-of-Russet-Residence--1025x450.jpg") no-repeat center center;
+        //   -webkit-background-size: cover;
+        //   -moz-background-size: cover;
+        //   -o-background-size: cover;
+        //   background-size: cover;
+        // }
         .user-details {
           vertical-align: top;
           display: inline-block;
@@ -236,7 +255,7 @@
       .location {
         font-size: 1.2rem;
         display: block;
-        color: $lightgrey;
+        color: $black;
       }
     }
   }
@@ -251,32 +270,32 @@
   max-width: 150px;
   transition: background 0.3s ease-in-out;
   &:hover {
-    background: #2E5EA6;
+    background: $darkBlue;
     cursor: pointer;
   }
 }
 
-#pagination {
-  width: 100%;
-  display: block;
-  text-align: center;
-  .pages {
-    margin: 0 auto;
-    display: inline-block;
-    background: white;
-    -webkit-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
-    -moz-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
-    box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
-    li {
-      padding: 20px 30px;
-      display: inline-block;
-      &.active,
-      &:hover {
-        color: white;
-        font-weight: 700;
-        background: #2E5EA6;
-        cursor: pointer;
-      }
-    }
-  }
-}
+// #pagination {
+//   width: 100%;
+//   display: block;
+//   text-align: center;
+//   .pages {
+//     margin: 0 auto;
+//     display: inline-block;
+//     background: $offwhite;
+//     -webkit-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
+//     -moz-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
+//     box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
+//     li {
+//       padding: 20px 30px;
+//       display: inline-block;
+//       &.active,
+//       &:hover {
+//         color: $offwhite;
+//         font-weight: 700;
+//         background: $darkBlue;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+// }

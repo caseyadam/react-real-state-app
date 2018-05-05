@@ -1,214 +1,382 @@
 var listingsData = [
   {
     address: '20-34 grand ave',
-    city: 'Chicago',
+    city: 'Phalanx',
     state: 'NY',
-    rooms: 3,
-    price: 220000,
+    rooms: 'Mens',
+    price: 65,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Apartment',
-    image: 'http://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/4206-28/the-kelvin-apartments-exterior.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-phalanx1-md.jpg'
   },
   {
     address: '3 universal st',
-    city: 'Miami',
+    city: 'RVCA',
     state: 'FL',
-    rooms: 2,
-    price: 24666,
+    rooms: 'Mens',
+    price: 80,
     floorSpace: 1430,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Condo',
-    image: 'https://www.adinahotels.com/wp-content/uploads/sites/4/2016/07/adina-melbourne-flinders-street-apartment-hotel-one-and-two-bedroom-apartment-2-2013.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-rvca1-md.jpg'
   },
   {
     address: '1 president plaza',
-    city: 'Portland',
+    city: 'Scramble',
     state: 'VA',
-    rooms: 1,
-    price: 345355,
+    rooms: 'Mens',
+    price: 50,
     floorSpace: 2400,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Single Home',
-    image: 'https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2017/01/09/BostonGlobe.com/Lifestyle/Images/doherty_10names04_liv.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-scramble1-md.jpg'
   },
   {
     address: '889 beemore st',
-    city: 'Hoboken',
+    city: 'Reebok',
     state: 'NJ',
-    rooms: 0,
-    price: 80000,
+    rooms: 'Mens',
+    price: 75,
     floorSpace: 1000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Studio',
-    image: 'http://media.equityapartments.com/images/q_50/f_auto/fl_lossy/685-28/oak-park-apartment-homes-kitchen'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-reebok1-md.jpg'
   },
   {
     address: '43 hollywood blvd',
-    city: 'Los Angeles',
+    city: 'Hayabusa',
     state: 'CA',
-    rooms: 3,
-    price: 603000,
+    rooms: 'Mens',
+    price: 60,
     floorSpace: 3000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Condo',
-    image: 'http://cdn.freshome.com/wp-content/uploads/2016/02/design-modern-apartment-1-1025x450.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-hayabusa1-md.jpg'
   },
   {
     address: '2 main st',
-    city: 'Seattle',
+    city: 'Virus',
     state: 'NY',
-    rooms: 2,
-    price: 220000,
+    rooms: 'Mens',
+    price: 70,
     floorSpace: 2000,
     extras: [
       'elevator',
       'pool'
     ],
-    homeType: 'Multi Home',
-    image: 'http://www.theproserve.com/wp-content/uploads/2013/03/apartment-complex-insurance.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-virus1-md.jpg'
   },
   {
     address: '123 Fake St',
-    city: 'Springfield',
+    city: 'Phalanx',
     state: 'IN',
-    rooms: 1,
-    price: 150000,
+    rooms: 'Mens',
+    price: 65,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Room',
-    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-phalanx2-md.jpg'
   },
   {
     address: '456 Warble Ct',
-    city: 'Example',
+    city: 'RVCA',
     state: 'OO',
-    rooms: 1,
-    price: 200000,
+    rooms: 'Mens',
+    price: 80,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Room',
-    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-rvca2-md.jpg'
   },
   {
     address: '456 Warble Ct',
-    city: 'Example',
+    city: 'Virus',
     state: 'OO',
-    rooms: 1,
-    price: 200000,
+    rooms: 'Mens',
+    price: 70,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Room',
-    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-virus2-md.jpg'
   },
   {
     address: '456 Warble Ct',
-    city: 'Example',
+    city: 'Billabong',
     state: 'OO',
-    rooms: 1,
-    price: 200000,
+    rooms: 'Mens',
+    price: 65,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Room',
-    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-billabong2-md.jpg'
   },
   {
     address: '456 Warble Ct',
-    city: 'Example',
+    city: 'Phalanx',
     state: 'OO',
-    rooms: 1,
-    price: 200000,
+    rooms: 'Mens',
+    price: 60,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Room',
-    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-phalanx3-md.jpg'
   },
   {
     address: '456 Warble Ct',
-    city: 'Example',
+    city: 'Billabong',
     state: 'OO',
-    rooms: 1,
-    price: 200000,
+    rooms: 'Mens',
+    price: 60,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Room',
-    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-billabong1-md.jpg'
   },
   {
     address: '456 Warble Ct',
-    city: 'Example',
+    city: 'Hayabusa',
     state: 'OO',
-    rooms: 1,
-    price: 200000,
+    rooms: 'Mens',
+    price: 70,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Room',
-    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-hayabusa2-md.jpg'
   },
   {
     address: '456 Warble Ct',
-    city: 'Example',
+    city: 'Scramble',
     state: 'OO',
-    rooms: 1,
-    price: 200000,
+    rooms: 'Mens',
+    price: 70,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Room',
-    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
+    homeType: 'Rashguard',
+    image: '/img/mens/m-scramble2-md.jpg'
   },
   {
     address: '456 Warble Ct',
-    city: 'Example',
+    city: 'Reebok',
     state: 'OO',
-    rooms: 1,
-    price: 200000,
+    rooms: 'Mens',
+    price: 75,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Room',
-    image: 'http://www.carolinacouture.com/wood/wp-content/uploads/2014/09/apartment-contemporary-apartment-in-taiwan-by-fertility-design-and-mirror-glass-accent-stylish-and-elegant-apartment-designs-tiny-ass-apartment-design-ideas-apartment-interior.jpg'
-  }
+    homeType: 'Compression Pants',
+    image: '/img/mens/m-reebok2-md.jpg'
+  },
+  {
+    address: '20-34 grand ave',
+    city: 'Phalanx',
+    state: 'NY',
+    rooms: 'Kids',
+    price: 55,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Rashguard',
+    image: '/img/kids/k-phalanx-rashguard-md.png'
+  },
+  {
+    address: '3 universal st',
+    city: 'RVCA',
+    state: 'FL',
+    rooms: 'Kids',
+    price: 50,
+    floorSpace: 1430,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Rashguard',
+    image: '/img/kids/k-rvca-rashguard1-md.jpg'
+  },
+  {
+  address: '456 Warble Ct',
+  city: 'Billabong',
+  state: 'OO',
+  rooms: 'Womens',
+  price: 60,
+  floorSpace: 2000,
+  extras: [
+    'elevator',
+    'gym'
+  ],
+  homeType: 'Shorts',
+  image: '/img/womens/w-billabong-boardshorts1-md.jpg'
+},
+{
+  address: '456 Warble Ct',
+  city: 'Billabong',
+  state: 'OO',
+  rooms: 'Womens',
+  price: 60,
+  floorSpace: 2000,
+  extras: [
+    'elevator',
+    'gym'
+  ],
+  homeType: 'Shorts',
+  image: '/img/womens/w-billabong-boardshorts2-md.jpg'
+},
+{
+  address: '456 Warble Ct',
+  city: 'Billabong',
+  state: 'OO',
+  rooms: 'Womens',
+  price: 60,
+  floorSpace: 2000,
+  extras: [
+    'elevator',
+    'gym'
+  ],
+  homeType: 'Rashguard',
+  image: '/img/womens/w-billabong-rashguard1-md.jpg'
+},
+{
+  address: '456 Warble Ct',
+  city: 'Billabong',
+  state: 'OO',
+  rooms: 'Womens',
+  price: 60,
+  floorSpace: 2000,
+  extras: [
+    'elevator',
+    'gym'
+  ],
+  homeType: 'Rashguard',
+  image: '/img/womens/w-billabong-rashguard2-md.jpg'
+},
+{
+    address: '456 Warble Ct',
+    city: 'Reebok',
+    state: 'OO',
+    rooms: 'Womens',
+    price: 75,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Shorts',
+    image: '/img/womens/w-reebok-short1-md.jpg'
+  },
+  {
+    address: '456 Warble Ct',
+    city: 'Reebok',
+    state: 'OO',
+    rooms: 'Womens',
+    price: 75,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Compression Pants',
+    image: '/img/womens/w-reebok-pants1-md.jpg'
+  },
+  {
+    address: '20-34 grand ave',
+    city: 'Phalanx',
+    state: 'NY',
+    rooms: 'Mens',
+    price: 65,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Shorts',
+    image: '/img/mens/m-phalanx-shorts1-md.jpg'
+  },
+  {
+    address: '20-34 grand ave',
+    city: 'Phalanx',
+    state: 'NY',
+    rooms: 'Mens',
+    price: 65,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Shorts',
+    image: '/img/mens/m-phalanx-shorts2-md.jpg'
+  },
+  {
+    address: '20-34 grand ave',
+    city: 'Phalanx',
+    state: 'NY',
+    rooms: 'Womens',
+    price: 65,
+    floorSpace: 2000,
+    extras: [
+      'elevator',
+      'gym'
+    ],
+    homeType: 'Rashguard',
+    image: '/img/womens/w-phalanx-rashguard1-md.jpg'
+  },
+  {
+  address: '20-34 grand ave',
+  city: 'Phalanx',
+  state: 'NY',
+  rooms: 'Womens',
+  price: 65,
+  floorSpace: 2000,
+  extras: [
+    'elevator',
+    'gym'
+  ],
+  homeType: 'Rashguard',
+  image: '/img/womens/w-phalanx-rashguard2-md.jpg'
+},
 ]
 
 export default listingsData;

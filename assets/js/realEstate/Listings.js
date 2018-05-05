@@ -1,62 +1,44 @@
 import React, { Component} from 'react'
 
 export default class Header extends Component {
-  //The constructor for a React component is called before it is mounted. If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
+  // The constructor for a React component is called before it is mounted. If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
   constructor () {
-    //When implementing the constructor for a React.Component subclass, you should call super(props) before any other statement. Otherwise, this.props will be undefined in the constructor, which can lead to bugs.
+    // When implementing the constructor for a React.Component subclass, you should call super(props) before any other statement. Otherwise, this.props will be undefined in the constructor, which can lead to bugs.
     super()
-    //The constructor is the right place to initialize state. To do so, just assign an object to this.state; don’t try to call setState() from the constructor.
+    // The constructor is the right place to initialize state. To do so, just assign an object to this.state; don’t try to call setState() from the constructor.
     this.state = {
-      name: 'InitializesState'
+      name: 'InitializeState'
     }
-    //The constructor is also often used to bind event handlers to the class instance.
+    // The constructor is also often used to bind event handlers to the class instance.
     this.loopListings = this.loopListings.bind(this)
   }
 
   loopListings () {
-    //pulls in all the data from listingsData and assigns it to this.props
+    // Pulls in all the data from listingsData and assigns it to this.props
     var {listingsData} = this.props
-    //if user searches for city that doesn't exist, this notification is displayed
+    // If user searches for city that doesn't exist, this notification is displayed
     if(listingsData == undefined || listingsData.length == 0) {
-      return "Sorry your filter did not match any listing"
+      return "Sorry, your filter did not match any listing."
     }
 
-    //HERE WE ADD THE HOUSE INFO BOXES AND THE TWO VIEW TYPES
+    //HOUSE INFO BOXES AND THE TWO VIEW TYPES
     return listingsData.map((listing, index) => {
       // THIS IS THE BOX VIEW OPTION
       if(this.props.globalState.view == 'box') {
         return (<div className="col-md-3" key={index}>
           <div className="listing">
             <div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
-              <span className="address">{listing.address}</span>
               <div className="details">
-                <div className="col-md-3">
-                  <div className="user-img"> </div>
-                </div>
                 <div className="col-md-9">
-                  <div className="user-details">
-                    <span className="user-name">Nina Smith</span>
-                    <span className="post-date">05/05/2017</span>
-                  </div>
-                  <div className="listing-details">
-                    <div className="floor-space">
-                      <i className="fa fa-square-o" aria-hidden="true"></i>
-                      <span>{listing.floorSpace} ft&sup2;</span>
-                    </div>
-                    <div className="bedrooms">
-                      <i className="fa fa-bed" aria-hidden="true"></i>
-                      <span>{listing.rooms} bedrooms</span>
-                    </div>
-                  </div>
                   <div className="view-btn">
-                    View Listing
+                    View Item
                   </div>
                 </div>
               </div>
             </div>
             <div className="bottom-info">
+              <span className="location"> {listing.city} </span>
               <span className="price">${listing.price}</span>
-              <span className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> {listing.city}, {listing.state} </span>
             </div>
           </div>
         </div>)
@@ -65,35 +47,17 @@ export default class Header extends Component {
         return (<div className="col-md-12 col-lg-6" key={index}>
           <div className="listing">
             <div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
-              <span className="address">{listing.address}</span>
               <div className="details">
-                <div className="col-md-3">
-                  <div className="user-img"> </div>
-                </div>
                 <div className="col-md-9">
-                  <div className="user-details">
-                    <span className="user-name">Nina Smith</span>
-                    <span className="post-date">05/05/2017</span>
-                  </div>
-                  <div className="listing-details">
-                    <div className="floor-space">
-                      <i className="fa fa-square-o" aria-hidden="true"></i>
-                      <span>{listing.floorSpace} ft&sup2;</span>
-                    </div>
-                    <div className="bedrooms">
-                      <i className="fa fa-bed" aria-hidden="true"></i>
-                      <span>{listing.rooms} bedrooms</span>
-                    </div>
-                  </div>
                   <div className="view-btn">
-                    View Listing
+                    View Item
                   </div>
                 </div>
               </div>
             </div>
             <div className="bottom-info">
               <span className="price">${listing.price}</span>
-              <span className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> {listing.city}, {listing.state} </span>
+              <span className="location"> {listing.city} </span>
             </div>
           </div>
         </div>)
@@ -103,10 +67,13 @@ export default class Header extends Component {
 
   render () {
     return (<section id="listings">
+
+    {/* Search bar */}
     <section className="search-area">
-      <input type="text" name="search" onChange={this.props.change} />
+      <input type="text" name="search" placeholder="Search" onChange={this.props.change} />
     </section>
-    {/* SORTING OPTIONS */}
+
+    {/* Sorting options */}
     <section className="sortby-area">
       <div className="results">{this.props.globalState.filteredData.length} results found</div>
       <div className="sort-options">
@@ -119,6 +86,7 @@ export default class Header extends Component {
           <i className="fa fa-th" aria-hidden="true" onClick={this.props.changeView.bind(null, "box")}></i>
         </div>
       </div>
+
     </section>
 
 {/* THIS DISPLAYS THE LISTING BOXES */}
@@ -129,7 +97,7 @@ export default class Header extends Component {
     </section>
 
     {/* PAGINATION */}
-    <section id="pagination">
+    {/* <section id="pagination">
     <div className="row">
       <ul className="pages">
         <li>Prev</li>
@@ -141,7 +109,7 @@ export default class Header extends Component {
         <li>Next</li>
       </ul>
       </div>
-    </section>
+    </section> */}
 
   </section>)
   }

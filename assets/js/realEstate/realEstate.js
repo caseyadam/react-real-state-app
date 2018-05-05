@@ -4,16 +4,17 @@ import Header from './Header.js'
 import Filter from './Filter.js'
 import Listings from './Listings.js'
 import listingsData from './data/listingsData.js'
+import Footer from './Footer.js'
 
 class App extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Initialize',
+      name: 'InitializeState',
       listingsData,
       city: 'All',
       homeType: 'All',
-      bedrooms: '0',
+      bedrooms: 'All',
       min_price: 0,
       max_price: 100,
       min_floor_space: 0,
@@ -28,12 +29,12 @@ class App extends Component {
       view: 'box',
       search: ''
     }
-
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForms = this.populateForms.bind(this)
     this.changeView = this.changeView.bind(this)
   }
+
   componentWillMount(){
     var listingsData = this.state.listingsData.sort((a, b) => {
       return a.price - b.price
@@ -49,10 +50,10 @@ class App extends Component {
     this.setState({
       [name]: value
     }, () => {
-      // console.log(this.state)
       this.filteredData()
     })
   }
+
   changeView(viewName){
     this.setState({
       view: viewName
@@ -65,7 +66,7 @@ class App extends Component {
       && item.price <= this.state.max_price
       && item.floorSpace >= this.state.min_floor_space
       && item.floorSpace <= this.state.max_floor_space
-      && item.rooms >= this.state.bedrooms
+      // && item.rooms >= this.state.bedrooms
     })
 
     if(this.state.city != "All") {
@@ -79,6 +80,12 @@ class App extends Component {
         return item.homeType == this.state.homeType
       })
     }
+    //EXPERIMENT
+    // if(this.state.rooms != "All") {
+    //   newData = newData.filter((item) => {
+    //     return item.rooms == this.state.rooms
+    //   })
+    // }
 
     if(this.state.sortby == 'price-dsc') {
       newData = newData.sort((a,b) => {
@@ -91,7 +98,7 @@ class App extends Component {
         return b.price - a.price
       })
     }
-
+    //Search by brand
     if(this.state.search != ''){
       newData = newData.filter((item) => {
         var city = item.city.toLowerCase()
@@ -128,18 +135,18 @@ class App extends Component {
     homeTypes = homeTypes.sort()
 
     // bedrooms
-    var bedrooms = this.state.listingsData.map((item) => {
-      return item.rooms
-    })
-    bedrooms = new Set(bedrooms)
-    bedrooms = [...bedrooms]
-
-    bedrooms = bedrooms.sort()
+    // var bedrooms = this.state.listingsData.map((item) => {
+    //   return item.rooms
+    // })
+    // bedrooms = new Set(bedrooms)
+    // bedrooms = [...bedrooms]
+    //
+    // bedrooms = bedrooms.sort()
 
     this.setState({
       populateFormsData: {
         homeTypes,
-        bedrooms,
+        // bedrooms,
         cities
       }
     }, () => {
@@ -149,12 +156,14 @@ class App extends Component {
   }
 
   render () {
-    return (<div>
-      <Header />
-      <section id="content-area">
-        <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
-        <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView}/>
-      </section>
+    return (
+      <div>
+        <Header />
+        <section id="content-area">
+          <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
+          <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView}/>
+        </section>
+        <Footer />
       </div>)
   }
 }
